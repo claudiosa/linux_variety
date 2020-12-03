@@ -1,0 +1,4 @@
+#!/bin/bash
+###[ -x ~/.icewm/restart ] && source ~/.icewm/restart
+##icewmbg mountain_lake-1440x900.jpg &
+qterminal &
