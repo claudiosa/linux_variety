@@ -1,8 +1,7 @@
 #!/bin/bash
 clear
 echo "Removing old m3u files ..."
-mv *.m3u temp/
-#rm *.m3u
+rm *.m3u
 
 #currentDate=`date  +"%d%m%Y"`
 CURRENTDATE=`date +"%d%m%y"`   ### %y  only 20

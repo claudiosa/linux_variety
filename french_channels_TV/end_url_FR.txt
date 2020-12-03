@@ -9,4 +9,10 @@ https://iptvm3ulist.com/m3u/fr02_iptvm3ulist_com_171020.m3u
 https://iptvm3ulist.com/m3u/fr03_iptvm3ulist_com_171020.m3u
 https://iptvm3ulist.com/m3u/fr04_iptvm3ulist_com_171020.m3u
 
-https://iptvm3ulist.com/m3u/fr01_iptvm3ulist_com_012220.m3u
+https://iptvm3ulist.com/m3u/fr01_iptvm3ulist_com_011220.m3u
+
+
+https://iptvm3ulist.com/m3u/frXY_iptvm3ulist_com_DDMMYY.m3u
+
+Provedor m3u8
+https://hlscat.com/france_/

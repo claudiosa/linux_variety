@@ -1,13 +1,32 @@
 How to play m3u playlist files with VLC Media Player
 
-There are 2 simple different ways to open a m3u file with Vlc Media Player. If it is your default player for m3u file format, you can simply double click on a m3u file and open it. After you opened a m3u file, press ctrl + L to see channel list.
+There are 2 simple different ways to 
+open a m3u file with Vlc Media Player. 
+If it is your default player for m3u file 
+format, you can simply double click on a
+ m3u file and open it. After you opened a m3u file, 
+press ctrl + L to see channel list.
 
-If you don’t want to download any m3u list but you want to play them with url, you need to copy link address of m3u list, open VLC Player, press ctrl + V and paste the url which you copied.
+If you don’t want to download 
+any m3u list but you want to play 
+them with url, you need to copy link 
+address of m3u list, open VLC Player, 
+press ctrl + V and paste the url which 
+you copied.
 
-If you wish to get more information about playing m3u lists with Vlc Media Player, you can visit this tutorial.
+If you wish to get more information 
+about playing m3u lists with Vlc Media
+ Player, you can visit this tutorial.
 
-If a channel stops every 20-30 seconds or skips to another channel
+If a channel stops every 20-30 seconds or 
+skips to another channel
 
-Each free m3u list has user limit, we always try to find the best lists with huge user limit. if more users than allowed try to watch same m3u list at the same time, channels will stop or skip to another one. In this case you can activate the “loop play button” on VLC Media Player.
+Each free m3u list has user limit,
+ we always try to find the best lists
+ with huge user limit. if more users than
+ allowed try to watch same m3u list at the same
+ time, channels will stop or skip to another one. 
+In this case you can activate the “loop play button”
+ on VLC Media Player.
 
 You can find loop play button here :
