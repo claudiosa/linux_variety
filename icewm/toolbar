@@ -3,6 +3,7 @@
 # TASK BAR
 prog XTerm ! x-terminal-emulator
 prog "XFE" ! xfe 
-prog "Mousepad" ! mousepad /usr/bin/mousepad 
+prog "Mousepad" ! mousepad 
 prog "Qterminal" ! qterminal 
-prog "WWW" ! midori
+prog "smplayer" !smplayer
+prog "WWW" ! dillo
