@@ -101,7 +101,6 @@ ii  glib-networking:armhf                2.58.0-2+deb10u2                    arm
 ii  glib-networking-common               2.58.0-2+deb10u2                    all          network-related giomodules for GLib - data files
 ii  glib-networking-services             2.58.0-2+deb10u2                    armhf        network-related giomodules for GLib - D-Bus services
 ii  gnome-icon-theme                     3.12.0-3                            all          GNOME Desktop icon theme
-ii  gnome-screenshot                     3.30.0-2                            armhf        screenshot application for GNOME
 ii  gnupg                                2.2.12-1+deb10u1                    all          GNU privacy guard - a free PGP replacement
 ii  gnupg-l10n                           2.2.12-1+deb10u1                    all          GNU privacy guard - localization files
 ii  gnupg-utils                          2.2.12-1+deb10u1                    armhf        GNU privacy guard - utility programs
@@ -268,6 +267,9 @@ ii  libfastjson4:armhf                   0.99.8-2                            arm
 ii  libfdisk1:armhf                      2.33.1-0.1                          armhf        fdisk partitioning library
 ii  libffi6:armhf                        3.2.1-9                             armhf        Foreign Function Interface library runtime
 ii  libfftw3-single3:armhf               3.3.8-2                             armhf        Library for computing Fast Fourier Transforms - Single precision
+ii  libfile-basedir-perl                 0.08-1                              all          Perl module to use the freedesktop basedir specification
+ii  libfile-desktopentry-perl            0.22-1                              all          Perl module to handle freedesktop .desktop files
+ii  libfile-mimeinfo-perl                0.29-1                              all          Perl module to determine file types
 ii  libflac8:armhf                       1.3.2-3                             armhf        Free Lossless Audio Codec - runtime C library
 ii  libfltk1.1:armhf                     1.1.10-26                           armhf        Fast Light Toolkit - shared libraries
 ii  libfltk1.3:armhf                     1.3.4-9                             armhf        Fast Light Toolkit - main shared library
@@ -295,6 +297,8 @@ ii  libglapi-mesa:armhf                  18.3.6-2+deb10u1                    arm
 ii  libgles2:armhf                       1.1.0-1                             armhf        Vendor neutral GL dispatch library -- GLESv2 support
 ii  libglew2.1:armhf                     2.1.0-4                             armhf        OpenGL Extension Wrangler - runtime environment
 ii  libglib2.0-0:armhf                   2.58.3-2+deb10u2                    armhf        GLib library of C routines
+ii  libglib2.0-bin                       2.58.3-2+deb10u2                    armhf        Programs for the GLib library
+ii  libglib2.0-data                      2.58.3-2+deb10u2                    all          Common files for GLib library
 ii  libglibmm-2.4-1v5:armhf              2.58.0-2                            armhf        C++ wrapper for the GLib toolkit (shared libraries)
 ii  libglu1-mesa:armhf                   9.0.0-2.1+b3                        armhf        Mesa OpenGL utility library (GLU)
 ii  libglvnd0:armhf                      1.1.0-1                             armhf        Vendor neutral GL dispatch library
@@ -336,6 +340,7 @@ ii  libindicator3-7:armhf                0.5.0-4                             arm
 ii  libinput-bin                         1.12.6-2+deb10u1                    armhf        input device management and event handling library - udev quirks
 ii  libinput10:armhf                     1.12.6-2+deb10u1                    armhf        input device management and event handling library - shared library
 ii  libip4tc0:armhf                      1.8.2-4                             armhf        netfilter libip4tc library
+ii  libipc-system-simple-perl            1.25-4                              all          Perl module to run commands simply, with detailed diagnostics
 ii  libiperf0:armhf                      3.6-2                               armhf        Internet Protocol bandwidth measuring tool (runtime files)
 ii  libisc-export1100:armhf              1:9.11.5.P4+dfsg-5.1+deb10u2        armhf        Exported ISC Shared Library
 ii  libisl19:armhf                       0.20-2                              armhf        manipulating sets and relations of integer points bounded by linear constraints
@@ -351,6 +356,8 @@ ii  libjson-glib-1.0-0:armhf             1.4.4-2                             arm
 ii  libjson-glib-1.0-common              1.4.4-2                             all          GLib JSON manipulation library (common files)
 ii  libk5crypto3:armhf                   1.17-3+deb10u1                      armhf        MIT Kerberos runtime libraries - Crypto Library
 ii  libkeyutils1:armhf                   1.6-6                               armhf        Linux Key Management Utilities (library)
+ii  libkf5windowsystem-data              5.54.0-1                            all          Convenience access to certain properties and features of the window manager
+ii  libkf5windowsystem5:armhf            5.54.0-1                            armhf        Convenience access to certain properties and features of the window manager
 ii  libklibc:armhf                       2.0.6-1                             armhf        minimal libc subset for use with initramfs
 ii  libkmod2:armhf                       26-1                                armhf        libkmod shared library
 ii  libkrb5-3:armhf                      1.17-3+deb10u1                      armhf        MIT Kerberos runtime libraries
@@ -455,6 +462,8 @@ ii  libqt5script5:armhf                  5.11.3+dfsg-3                       arm
 ii  libqt5svg5:armhf                     5.11.3-2                            armhf        Qt 5 SVG module
 ii  libqt5widgets5:armhf                 5.11.3+dfsg1-1+deb10u4              armhf        Qt 5 widgets module
 ii  libqt5x11extras5:armhf               5.11.3-2                            armhf        Qt 5 X11 extras
+ii  libqt5xdg3:armhf                     3.3.1-2                             armhf        Implementation of the XDG Specifications for Qt (shared lib)
+ii  libqt5xdgiconloader3:armhf           3.3.1-2                             armhf        Implementation of the XDG Iconloader for Qt (shared lib)
 ii  libqt5xml5:armhf                     5.11.3+dfsg1-1+deb10u4              armhf        Qt 5 XML module
 ii  libqtermwidget5-0:armhf              0.14.1-1                            armhf        Terminal emulator widget for Qt 5 (shared libraries)
 ii  libraw1394-11:armhf                  2.1.2-1+b1                          armhf        library for direct access to IEEE 1394 bus (aka FireWire)
@@ -524,6 +533,7 @@ ii  libuchardet0:armhf                   0.0.6-3                             arm
 ii  libudev1:armhf                       241-7~deb10u5                       armhf        libudev shared library
 ii  libunistring2:armhf                  0.9.10-1                            armhf        Unicode string library for C
 ii  libunwind8:armhf                     1.2.1-10~deb10u1                    armhf        library to determine the call-chain of a program - runtime
+ii  liburi-perl                          1.76-1                              all          module to manipulate and access URI strings
 ii  libusb-1.0-0:armhf                   2:1.0.22-2                          armhf        userspace USB programming library
 ii  libutempter0:armhf                   1.1.6-3                             armhf        privileged helper for utmp/wtmp updates (runtime)
 ii  libutf8proc2:armhf                   2.3.0-1                             armhf        C library for processing UTF-8 Unicode data (shared library)
@@ -703,6 +713,7 @@ ii  rng-tools                            2-unofficial-mt.14-1+b2             arm
 ii  rsync                                3.1.3-6                             armhf        fast, versatile, remote (and local) file-copying tool
 ii  rsyslog                              8.1901.0-1                          armhf        reliable system and kernel logging daemon
 ii  samba-libs:armhf                     2:4.9.5+dfsg-5+deb10u1              armhf        Samba core libraries
+ii  screengrab                           1.101-1                             armhf        Crossplatform tool for getting screenshots
 ii  sed                                  4.7-1                               armhf        GNU stream editor for filtering/transforming text
 ii  sensible-utils                       0.0.12                              all          Utilities for sensible alternative selection
 ii  shared-mime-info                     1.10-1                              armhf        FreeDesktop.org shared MIME database and spec
