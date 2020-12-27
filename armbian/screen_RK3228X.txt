@@ -1,0 +1,26 @@
+Well guys I don't know if you have already done it, but 
+I realized that there was no 3D acceleration on my desk 
+(after installing the video drivers) so 
+I modified the x11 config file and I restarted ... 
+and now i have the tv box which can be used almost like a desktop ...
+
+so Make a backup of the file "/etc/X11/xorg.conf.d/01-armbian-defaults.conf", 
+and replace its content with the following:
+
+Section "Device"
+    Identifier  "Rockchip Graphics"
+    Driver      "modesetting"
+    Option      "AccelMethod"    "glamor"     ### "glamor" to enable 3D acceleration, "none" to disable 
+    Option      "DRI"            "2"
+
+    # You can disable Vsync for better 3D benchmark score, at the cost of worst video playing. Not recommended.
+    # Option      "Dri2Vsync"      "false"
+
+EndSection
+Section "Screen"
+    Identifier "Default Screen"
+    SubSection "Display"
+        Depth 24
+        Modes "1920x1080" "1280x1024" "1024x768" "800x600"
+    EndSubSection
+EndSection
