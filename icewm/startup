@@ -1,5 +1,6 @@
 #!/bin/bash
-###[ -x ~/.icewm/restart ] && source ~/.icewm/restart
+[ -x ~/.icewm/restart ] && source ~/.icewm/restart
 ####exec icewmbg  ~/.icewm/mountain_lake-1440x900.jpg &
-exec icewmbg  ~/.icewm/waterfall-in-forest.jpg &
-exec qterminal &
+##exec icewmbg  ~/.icewm/waterfall-in-forest.jpg &
+qterminal  --geometry 80x25+217+235 &
+xscreensaver &
