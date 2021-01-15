@@ -8,6 +8,7 @@
 
 /* Using Content Script Injection (window.functionName) to make function available outside GreaseMonkey scope
 Page reload is needed if using existing function _jsonp_loader_callback_request_0. */
+
 window._jsonp_loader_callback_request_1 = function(json)
 {
   alert(json.videos[1].url);
