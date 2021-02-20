@@ -2,5 +2,6 @@
 [ -x ~/.icewm/restart ] && source ~/.icewm/restart
 ####exec icewmbg  ~/.icewm/mountain_lake-1440x900.jpg &
 ##exec icewmbg  ~/.icewm/waterfall-in-forest.jpg &
+setxkbmap -model pc105 -layout br -variant abnt2 &
 qterminal  --geometry 80x25+217+235 &
 xscreensaver &
