@@ -1,0 +1,4 @@
+
+Steps to UPGRADE etc
+https://androidpctv.com/firmware-update-guide-android-tvbox-rockchip-soc/
+https://androidpctv.com/firmware-update-guide-tvbox-soc-amlogic/
