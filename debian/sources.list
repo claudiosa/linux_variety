@@ -1,0 +1,29 @@
+# 
+
+# deb cdrom:[Official Debian GNU/Linux Live 10.8.0 standard 2021-02-06T17:07]/ buster main
+
+#deb cdrom:[Official Debian GNU/Linux Live 10.8.0 standard 2021-02-06T17:07]/ buster main
+
+deb http://debian.c3sl.ufpr.br/debian/ buster main contrib non-free
+#deb-src http://debian.c3sl.ufpr.br/debian/ buster main
+
+deb http://security.debian.org/debian-security buster/updates main contrib non-free
+#deb-src http://security.debian.org/debian-security buster/updates main
+
+# buster-updates, previously known as 'volatile'
+deb http://debian.c3sl.ufpr.br/debian/ buster-updates main  contrib non-free
+#deb-src http://debian.c3sl.ufpr.br/debian/ buster-updates main
+
+# This system was installed using small removable media
+# (e.g. netinst, live or single CD). The matching "deb cdrom"
+# entries were disabled at the end of the installation process.
+# For information about how to configure apt package sources,
+# see the sources.list(5) manual.
+
+
+# buster-backports, previously on backports.debian.org
+
+##deb http://deb.debian.org/debian/ buster-backports main contrib non-free
+
+# buster-updates, previously known as 'volatile'
+#deb http://deb.debian.org/debian/ buster-updates main contrib non-free
