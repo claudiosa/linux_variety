@@ -1,0 +1,10 @@
+
+lsof | grep video0
+
+sudo rmmod -f uvcvideo(to kill laptop camera)
+
+sudo modprobe -r uvcvideo(to restart the video module)
+
+sudo modprobe uvcvideo(to restart the laptop camera)
+
+sudo modprobe -a uvcvideo(can be used while skipping steps 2&3 to restart the camera directly)
