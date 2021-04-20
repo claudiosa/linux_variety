@@ -1,0 +1,4 @@
+dd if=aml_sdc_burn.UBOOT of=/dev/mmcblk0 bs=1 count=442
+dd if=aml_sdc_burn.UBOOT of=/dev/mmcblk0 seek=1 skip=1 bs=512
+cp aml_sdc_burn.ini aml_sdc_burn.UBOOT /media/ccs/0ACF-30A3/
+rsync -ah --progress  aml_upgrade_package_s912-pie-beta2-ddr3-3g-1000-slowemmc.img  /media/ccs/0ACF-30A3/
