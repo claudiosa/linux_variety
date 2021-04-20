@@ -1,7 +1,8 @@
 #!/bin/bash
 clear
 echo "Removing old m3u files ..."
-rm *.m3u
+mv *.m3u temp/
+#rm *.m3u
 
 #currentDate=`date  +"%d%m%Y"`
 CURRENTDATE=`date +"%d%m%y"`   ### %y  only 20
@@ -20,3 +21,4 @@ rm $FILE_ZIP
 #unzip fr_iptvm3ulist_com_301120.zip
 #rm fr_iptvm3ulist_com_301120.zip
 echo "==== OK ===="
+wget  https://iptvm3ulist.com/zip/fr_iptvm3ulist_com_180421.zip

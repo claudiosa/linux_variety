@@ -21,3 +21,5 @@ rm $FILE_ZIP
 #unzip fr_iptvm3ulist_com_301120.zip
 #rm fr_iptvm3ulist_com_301120.zip
 echo "==== OK ===="
+## Manual example
+###wget  https://iptvm3ulist.com/zip/fr_iptvm3ulist_com_180421.zip
