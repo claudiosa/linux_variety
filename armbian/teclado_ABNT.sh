@@ -3,5 +3,5 @@
 # opções, mas no caso da configuração específica do layout ABNT2, usaremos as seguintes opções:
 # setxkbmap -model pc105 -layout br -variant abnt2
 # PACOTE: pacote zsh-common
-#!/bin/bash
+!/bin/bash
 setxkbmap -model pc105 -layout br -variant abnt2
