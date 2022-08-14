@@ -56,3 +56,22 @@ and "be happy with your octa-core"
 
 
 claudio
+
+
+
+/*  some notes from other sources:
+
+1. I have same problem with meson8b on S905W Amlogic SoC.
+"ethtool -r" fixes problem after start
+Ans: never tried
+
+2. dmesg
+...
+[  135.873994] meson8b-dwmac c9410000.ethernet eth0: Link is Up - 1Gbps/Full - flow control rx/t
+
+3. sometimes you need to del this /var/log/ as SUDO
+due some halts inaproperly Example:
+..... /var/log/journal/c89ea87dd75d4e68995ac8cb2fa01034/system.journal corrupted or uncleanly shut down, renaming and replacing
+
+
+*/
