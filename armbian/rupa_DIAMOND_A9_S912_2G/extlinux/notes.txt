@@ -1,0 +1,58 @@
+Some instructions for me..... (and for you, if you wish):
+
+
+# generate a correct dtb
+dtc -I dts -O dtb diamond_RUPA_A9_FINE.dts -o diamond_RUPA_A9_FINE.dtb
+
+# generate a dts for diamond RUPA A9 ...
+dtc -I dtb -O dts diamond_RUPA_A9_FINE.dtb -o diamond_RUPA_A9_FINE.dts
+
+In any DTS look for something similar in your board dts:
+
+..........................
+	compatible = "videostrong,gxm-kiii-pro\0amlogic,s912\0amlogic,meson-gxm";
+	model = "MeCool KIII Pro";
+
+	aliases {
+		mmc0 = "/soc/apb@d0000000/mmc@72000";
+		mmc1 = "/soc/apb@d0000000/mmc@74000";
+		mmc2 = "/soc/apb@d0000000/mmc@70000";
+		serial0 = "/soc/bus@c8100000/serial@4c0";
+		ethernet0 = "/soc/ethernet@c9410000";
+	};
+..........................
+
+This TV BOX, "MeCool KIII Pro", almost the same of mine.
+
+
+To ETHERNET RUNS FINE:
+
+1. Search for ethernet-phy@0
+
+2. Fix to:
+.......................
+ethernet-phy@0 {
+			    compatible = "ethernet-phy-id0381.5c11\0ethernet-phy-ieee802.3-c22";
+				max-speed = <0x3e8>;
+				reg = <0x01>;
+.......................
+
+and repeat all the process (as root)::
+
+
+1. Edit properly extlinux.conf and extlinux.conf-menu  
+   take care with the paths and names ... 
+   get my examples here ....
+   
+2. Generate a correct dtb, in my case:   
+   dtc -I dts -O dtb diamond_RUPA_A9_FINE.dts -o diamond_RUPA_A9_FINE.dtb
+
+3. Copy it for right place 
+   cp diamond_RUPA_A9_FINE.dtb /boot/extlinux/dtb/amlogic/
+
+4. Give a reboot without any emmc-card    
+
+and "be happy with your octa-core"
+
+
+claudio
