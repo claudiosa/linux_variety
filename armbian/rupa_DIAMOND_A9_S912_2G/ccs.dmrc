@@ -1,0 +1,5 @@
+[Desktop]
+#Language=en_US.utf8
+Language=pt_BR.utf8
+#Session=icewm-session
+Session=xfce4-session

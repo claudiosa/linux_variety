@@ -1,0 +1,10 @@
+# This is a default toolbar definition file for IceWM
+# Place your personal variant in $HOME/.icewm directory.
+# TASK BAR
+prog  "x-terminal-emulator" ! x-terminal-emulator
+prog "XFE" ! xfe 
+prog "Mousepad" ! mousepad 
+prog "Qterminal" ! qterminal 
+prog "smplayer" ! smplayer
+prog "pavucontrol" ! pavucontrol
+prog "WWW" ! dillo

@@ -1,0 +1,28 @@
+Lendo listas de pacotes...
+Construindo árvore de dependências...
+Lendo informação de estado...
+Lendo informações estendidas de estado...
+Inicializando estados de pacotes...
+[INSTALL] icewm:armhf 1.4.3.0~pre-20181030-2
+[INSTALL] icewm-common:armhf 1.4.3.0~pre-20181030-2
+[INSTALL] xserver-xorg-core:armhf 2:1.20.4-1+deb10u3
+[INSTALL] xserver-xorg-core-rockchip:armhf 2:1.20.3-3armbian1
+[INSTALL] armbian-buster-desktop:armhf 21.02.2
+[INSTALL] armbian-firmware:armhf 21.05.6
+[INSTALL] xorg:armhf 1:7.7+19
+[INSTALL] synaptic:armhf 0.84.6
+[INSTALL] epiphany-browser:armhf 3.32.1.2-3~deb10u1
+[INSTALL] qterminal:armhf 0.14.1-1
+[INSTALL] chromium:armhf 90.0.4430.212-1~deb10u1
+[INSTALL] fswebcam:armhf 20140113-2
+[INSTALL] hwinfo:armhf 21.63-3
+[INSTALL] cheese:armhf 3.31.90-1
+[INSTALL] mousepad:armhf 0.4.1-2
+[INSTALL] wmshutdown:armhf 1.4-2+b1
+[INSTALL] nodm:armhf 0.13-5
+[INSTALL] pavucontrol:armhf 3.0-4
+[INSTALL] smplayer:armhf 18.10.0~ds0-1
+[INSTALL] xfe:armhf 1.43.1-1
+[INSTALL] wmshutdown:armhf 1.4-2+b1
+[INSTALL] mesa-utils:armhf 8.4.0-1+b1
+cat /var/log/aptitude | grep '\[INSTALL\]'
