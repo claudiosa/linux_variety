@@ -1,0 +1,13 @@
+Original steps: https://www.linuxquestions.org/questions/slackware-14/how-to-install-kodi-addon-pvr-iptvsimple-4175588312/
+but it has some bugs ... for me, it works as:
+
+This procedures works
+git clone https://github.com/xbmc/xbmc.git
+git clone https://github.com/kodi-pvr/pvr.iptvsimple.git
+cd pvr.iptvsimple && mkdir build && cd build
+mkdir ../../xbmc/project/cmake/addons
+
+cmake -DADDONS_TO_BUILD=pvr.iptvsimple -DADDON_SRC_PREFIX=../.. -DCMAKE_BUILD_TYPE=Debug -DCMAKE_INSTALL_PREFIX=../../xbmc/addons -DPACKAGE_ZIP=1 ../../xbmc/cmake/addons
+sudo mv ../../xbmc/addons/pvr.iptvsimple/ /usr/share/kodi/addons/
+
+DONE!
