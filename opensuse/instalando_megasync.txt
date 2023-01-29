@@ -1,0 +1,21 @@
+Fonte original:
+https://www.blogopcaolinux.com.br/2017/02/Instalando-o-MEGA-Sync-no-openSUSE-e-Fedora.html?m=1
+
+
+1.  Antes de começar, recomendo que instale todas as atualizações disponíveis para o seu sistema, 
+evitando assim problemas com dependências e conflitos de pacotes. 
+# sudo zypper ref & sudo zypper up
+
+2.  Adicione o repositório oficial do MEGA:
+ # sudo zypper ar -f https://mega.nz/linux/repo/openSUSE_Leap_15.4/ MEGAsync
+
+3. E importe a chave de assinatura do repositório com:
+# sudo rpm --import https://mega.nz/linux/repo/openSUSE_Leap_15.4/repodata/repomd.xml.key
+
+4. Depois de adicionar o repositório do MEGA (como mostramos logo acima), basta executar o 
+comando abaixo para instalar a versão mais recente do MEGAsync no seu openSUSE
+# sudo zypper ref && sudo zypper in megasync
+
+5.  Caso queira instalar também a integração com o gerenciador de arquivos, execute 
+um dos comandos abaixo (de acordo com o seu ambiente de área de trabalho)
+# sudo zypper in thunar-megasync

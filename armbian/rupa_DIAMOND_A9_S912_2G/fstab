@@ -1,0 +1,11 @@
+#####################################################
+#/var/swap none swap sw 0 0
+#/dev/root	/		auto		noatime,errors=remount-ro	0 1
+#proc		/proc		proc		defaults				0 0
+
+/dev/root	/		ext4		defaults,noatime,errors=remount-ro	0 1
+tmpfs		/tmp		tmpfs		defaults,nosuid				0 0
+LABEL=BOOT_EMMC	/boot		vfat		defaults				0 2
+#/dev/mmcblk0p1 on /media/microSD type vfat (rw,relatime,fmask=0022,dmask=0022,codepage=437,iocharset=ascii,shortname=mixed,utf8,errors=remount-ro)
+/dev/mmcblk0p1  /media/microSD  vfat           user,defaults,rw,umask=0000,dmask=0000,utf8,iocharset=ascii    0 0
+#######################################################
