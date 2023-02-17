@@ -1,0 +1,12 @@
+UUID=d6444ac6-c948-4d05-a650-a5b791ae74ad  /                       btrfs  defaults                      0  0
+UUID=d6444ac6-c948-4d05-a650-a5b791ae74ad  /var                    btrfs  subvol=/@/var                 0  0
+UUID=d6444ac6-c948-4d05-a650-a5b791ae74ad  /usr/local              btrfs  subvol=/@/usr/local           0  0
+UUID=d6444ac6-c948-4d05-a650-a5b791ae74ad  /tmp                    btrfs  subvol=/@/tmp                 0  0
+UUID=d6444ac6-c948-4d05-a650-a5b791ae74ad  /srv                    btrfs  subvol=/@/srv                 0  0
+UUID=d6444ac6-c948-4d05-a650-a5b791ae74ad  /root                   btrfs  subvol=/@/root                0  0
+UUID=d6444ac6-c948-4d05-a650-a5b791ae74ad  /opt                    btrfs  subvol=/@/opt                 0  0
+UUID=d6444ac6-c948-4d05-a650-a5b791ae74ad  /boot/grub2/x86_64-efi  btrfs  subvol=/@/boot/grub2/x86_64-efi  0  0
+UUID=d6444ac6-c948-4d05-a650-a5b791ae74ad  /boot/grub2/i386-pc     btrfs  subvol=/@/boot/grub2/i386-pc  0  0
+UUID=E984-A620                             /boot/efi               vfat   utf8                          0  2
+UUID=ae515b91-3fe6-4e2c-b473-b260ccf059ba  swap                    swap   defaults                      0  0
+UUID=f90b3f6c-9061-48a6-a16c-b30ecdc88870  /home                   btrfs  defaults                      0  0

@@ -1,0 +1,2 @@
+rm -f /var/log.hdd/journal/*/user-* /var/log/journal/*/user-*
+journalctl --flush && journalctl --disk-usage
