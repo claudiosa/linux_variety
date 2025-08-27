@@ -1,10 +1,9 @@
-# This is an example for IceWM's window options file.
-#
-# Place your variants in /etc/X11/icewm or in $HOME/.icewm
-# since modifications to this file will be discarded when you
-# (re)install icewm.
+# This is an example for icewm window options file.
+# It will be installed as /usr/share/icewm/winoptions.
+# Place your variants in /etc/X11/icewm or in $HOME/.icewm since
+# modifications to this file will be overwritten when you reinstall icewm.
 
-xterm.icon: xterm
+xterm.XTerm.icon: xterm
 rxvt.icon: xterm
 urxvtc.icon: urxvt
 urxvt.icon: urxvt
@@ -12,8 +11,6 @@ nxterm.icon: xterm
 fte.icon: fte
 emacs.Emacs.icon: emacs
 AWTapp.icon: java
-# workaround for XV window repositioning problems
-xv.nonICCCMconfigureRequest: 1
 
 # make Evince resizable
 evince.dBorder: 1
