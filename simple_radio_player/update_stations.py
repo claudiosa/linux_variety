@@ -5,8 +5,8 @@ import json
 def fetch_stations_from_radio_browser():
     url = "http://all.api.radio-browser.info/json/stations"
     params = {
-        #"limit": 10000,
-        "limit": 12000,
+        "limit": 9000,
+        #"limit": 12000,
         "hidebroken": True,
         "order": "clickcount",
         "reverse": True
