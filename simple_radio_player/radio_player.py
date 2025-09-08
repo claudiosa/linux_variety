@@ -236,7 +236,7 @@ class RadioPlayer:
                     if len(parts) > 1:
                         self.station_list.insert("end", parts[1])
         messagebox.showinfo("Sucesso", "Rádios atualizadas com sucesso!")
-        messagebox.showinfo("Atenção: fonte ...", "Fonte: http://all.api.radio-browser.info/json/stations")
+        messagebox.showinfo("Atenção: fonte ...", "API: https://de1.api.radio-browser.info/json/stations")
 
 if __name__ == "__main__":
     root = tk.Tk()
