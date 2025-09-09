@@ -1,2 +1,2 @@
 #!/bin/bash
-python radio_player.py
+python3 radio_player.py

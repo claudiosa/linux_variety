@@ -224,7 +224,7 @@ class RadioPlayer:
 
     def update_stations(self):
         """Atualiza a lista de estações."""
-        subprocess.run(["python3", "update_stations.py"])
+        subprocess.run(["python", "update_stations.py"])
         self.stations = self.load_stations()
         self.load_filters()
         self.station_list.delete(0, "end")
