@@ -63,19 +63,40 @@ class RadioPlayer:
             if i + 1 < len(self.stations):
                 line = self.stations[i].strip()
                 if line.startswith("#EXTINF:"):
-                    parts = line.split(",")
-                    if len(parts) > 3:
-                        countries.add(parts[2])
-                        tags.update(parts[3:])
+                    # Extrair a descrição: "#EXTINF:-1,<nome> - <país> - <tags>"
+                    description = line.split(",", 1)[1]
+                    parts = description.split(" - ")
+                    if len(parts) >= 3:
+                        country = parts[1].strip()
+                        station_tags = parts[2].strip().split(", ")
+                        countries.add(country)
+                        tags.update(station_tags)
         self.countries = sorted(countries)
         self.tags = sorted(tags)
+
+    def filter_stations(self, event=None):
+        """Filtra as estações por país ou tag."""
+        country = self.country_combo.get()
+        tag = self.tag_combo.get()
+        self.station_list.delete(0, "end")
+        for i in range(0, len(self.stations), 2):
+            if i + 1 < len(self.stations):
+                line = self.stations[i].strip()
+                if line.startswith("#EXTINF:"):
+                    description = line.split(",", 1)[1]
+                    parts = description.split(" - ")
+                    if len(parts) >= 3:
+                        station_name = parts[0].strip()
+                        station_country = parts[1].strip()
+                        station_tags = parts[2].strip().split(", ")
+                        if ((not country) or country == station_country) and ((not tag) or tag in station_tags):
+                            self.station_list.insert("end", station_name)
 
     def create_widgets(self):
         """Cria todos os widgets da interface gráfica."""
         # Frame de filtros
         filter_frame = ttk.LabelFrame(self.main_frame, text="Filtros")
         filter_frame.pack(fill="x", padx=10, pady=5)
-
         self.load_filters()
         ttk.Label(filter_frame, text="País:").grid(row=0, column=0, padx=5)
         self.country_combo = ttk.Combobox(filter_frame, values=self.countries, width=20)
@@ -90,6 +111,14 @@ class RadioPlayer:
         self.search_entry.grid(row=0, column=5, padx=5)
         self.search_entry.bind("<KeyRelease>", self.search_stations)
         ttk.Button(filter_frame, text="Atualizar Rádios", command=self.update_stations).grid(row=0, column=6, padx=5)
+
+        # Frame para URL externa
+        url_frame = ttk.LabelFrame(self.main_frame, text="Reproduzir URL Externa")
+        url_frame.pack(fill="x", padx=10, pady=5)
+        ttk.Label(url_frame, text="URL:").grid(row=0, column=0, padx=5)
+        self.url_entry = ttk.Entry(url_frame, width=50)
+        self.url_entry.grid(row=0, column=1, padx=5)
+        ttk.Button(url_frame, text="Play Externo", command=self.play_external_url).grid(row=0, column=2, padx=5)
 
         # Lista de estações e barra de rolagem
         self.station_list = tk.Listbox(self.main_frame, height=10, width=60, bg="yellow")
@@ -106,7 +135,6 @@ class RadioPlayer:
                     parts = line.split(",")
                     if len(parts) > 1:
                         self.station_list.insert("end", parts[1])
-
         if self.stations:
             self.station_list.selection_set(0)
         self.station_list.bind("<<ListboxSelect>>", self.on_select)
@@ -134,6 +162,24 @@ class RadioPlayer:
         # Botão "Sair"
         self.exit_btn = ttk.Button(btn_frame, text="Sair", command=self.on_close)
         self.exit_btn.pack(side="left", padx=5)
+
+    def play_external_url(self):
+        """Abre um xterm e executa o mpv com a URL informada."""
+        url = self.url_entry.get().strip()
+        if not url:
+            messagebox.showerror("Erro", "Informe uma URL válida!")
+            return
+        try:
+#           subprocess.Popen(["xterm", "-e", "mpv", url])
+            subprocess.Popen(["gnome-terminal", "--", "bash", "-c", f"mpv {url}; exec bash"])
+            '''
+            gnome-terminal -- bash -c "mpv <url>; exec bash":
+            Abre um novo terminal.
+            Executa o mpv com a URL.
+            Mantém o terminal aberto após o mpv ser fechado (por causa do exec bash).
+            '''
+        except Exception as e:
+            messagebox.showerror("Erro", f"Não foi possível abrir o gnome-terminal/mpv: {e}")
 
     def on_select(self, event):
         """Chamado quando uma estação é selecionada na lista."""
