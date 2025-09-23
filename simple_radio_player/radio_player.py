@@ -6,6 +6,7 @@ import os
 import signal
 import json
 import requests
+import shlex
 
 class RadioPlayer:
     """
@@ -195,11 +196,14 @@ class RadioPlayer:
     def play_station(self):
         """Inicia a reprodução da estação selecionada."""
         self.kill_all_mpv()  # Mata todos os processos mpv antes de iniciar um novo
-        station_line = self.stations[self.current_station * 2 + 1].strip()
+        ##station_line = self.stations[self.current_station * 2 + 1].strip()
+        station_line = self.station_urls[self.current_station]
         try:
             response = requests.head(station_line, timeout=5)
             if response.status_code == 200:
-                self.player_process = subprocess.Popen(["mpv", "--no-video", "--volume=" + str(self.volume), station_line])
+                escaped_url = shlex.quote(station_line)
+                #self.player_process = subprocess.Popen(["mpv", "--no-video", "--volume=" + str(self.volume), station_line])
+                self.player_process = subprocess.Popen(["mpv", "--no-video", "--volume=" + str(self.volume), escaped_url])
             else:
                 messagebox.showerror("Erro", f"Não foi possível tocar a estação: {response.status_code}")
         except requests.exceptions.RequestException as e:
