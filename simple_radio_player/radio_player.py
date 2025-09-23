@@ -92,6 +92,7 @@ class RadioPlayer:
                         if ((not country) or country == station_country) and ((not tag) or tag in station_tags):
                             self.station_list.insert("end", station_name)
 
+
     def create_widgets(self):
         """Cria todos os widgets da interface gráfica."""
         # Frame de filtros
@@ -128,13 +129,17 @@ class RadioPlayer:
         self.station_list.pack(fill="both", expand=True, padx=15, pady=15)
 
         # Preenche a lista de estações
+        # Preenche a lista de estações
+        self.station_urls = []  # Lista para armazenar as URLs das estações
         for i in range(0, len(self.stations), 2):
             if i + 1 < len(self.stations):
                 line = self.stations[i].strip()
-                if line.startswith("#EXTINF:"):
-                    parts = line.split(",")
-                    if len(parts) > 1:
-                        self.station_list.insert("end", parts[1])
+            if line.startswith("#EXTINF:"):
+                description = line.split(",", 1)[1]
+                station_name = description.split(" - ")[0].strip()
+                self.station_list.insert("end", station_name)
+                self.station_urls.append(self.stations[i + 1].strip())  # Armazena a URL correspondente
+
         if self.stations:
             self.station_list.selection_set(0)
         self.station_list.bind("<<ListboxSelect>>", self.on_select)
@@ -183,8 +188,9 @@ class RadioPlayer:
 
     def on_select(self, event):
         """Chamado quando uma estação é selecionada na lista."""
-        self.current_station = self.station_list.curselection()[0]
-        self.play_station()
+        selection = self.station_list.curselection()
+        if selection:
+            self.current_station = selection[0]
 
     def play_station(self):
         """Inicia a reprodução da estação selecionada."""
@@ -224,7 +230,7 @@ class RadioPlayer:
 
     def next_station(self):
         """Selecionar a próxima estação."""
-        if self.current_station < len(self.stations) // 2 - 1:
+        if self.current_station < len(self.station_urls) - 1:
             self.current_station += 1
             self.station_list.selection_clear(0, "end")
             self.station_list.selection_set(self.current_station)
