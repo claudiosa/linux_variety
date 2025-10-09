@@ -130,7 +130,6 @@ class RadioPlayer:
         self.station_list.pack(fill="both", expand=True, padx=15, pady=15)
 
         # Preenche a lista de estações
-        # Preenche a lista de estações
         self.station_urls = []  # Lista para armazenar as URLs das estações
         for i in range(0, len(self.stations), 2):
             if i + 1 < len(self.stations):
@@ -196,18 +195,24 @@ class RadioPlayer:
     def play_station(self):
         """Inicia a reprodução da estação selecionada."""
         self.kill_all_mpv()  # Mata todos os processos mpv antes de iniciar um novo
-        ##station_line = self.stations[self.current_station * 2 + 1].strip()
-        station_line = self.station_urls[self.current_station]
+
+        # Obtém o nome da estação a partir da linha #EXTINF
+        station_info_line = self.stations[self.current_station * 2].strip()
+        station_name = station_info_line.split(",", 1)[1].split(" - ")[0].strip()
+        station_url = self.station_urls[self.current_station]
+
+        print(f"Reproduzindo: {station_name} ({station_url})")
+
         try:
-            response = requests.head(station_line, timeout=5)
+            response = requests.head(station_url, timeout=5)
             if response.status_code == 200:
-                escaped_url = shlex.quote(station_line)
-                #self.player_process = subprocess.Popen(["mpv", "--no-video", "--volume=" + str(self.volume), station_line])
+                escaped_url = shlex.quote(station_url)
                 self.player_process = subprocess.Popen(["mpv", "--no-video", "--volume=" + str(self.volume), escaped_url])
             else:
                 messagebox.showerror("Erro", f"Não foi possível tocar a estação: {response.status_code}")
         except requests.exceptions.RequestException as e:
             messagebox.showerror("Erro", f"Não foi possível tocar a estação: {e}")
+
 
     def pause_station(self):
         """Pausa a reprodução da estação atual."""
